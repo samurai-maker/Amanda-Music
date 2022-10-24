@@ -2,10 +2,13 @@ pyrogram==1.4.16
 TgCrypto
 ffmpeg-python
 psutil
-py-tgcalls==0.8.6
+pytgcalls==3.0.0.dev16
+python-dotenv==0.19.0
 wheel
 youtube_dl
-youtube_search_python
-youtube_search
+pytube==11.0.1
+pafy==0.5.5
+youtube-search==2.1.0
+youtube-dl==2021.6.6
 wget
 requests
