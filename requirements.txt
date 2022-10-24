@@ -1,7 +1,9 @@
 pyrogram==1.4.16
 TgCrypto
 ffmpeg-python
+pillow
 psutil
+py-tgcalls==0.8.6
 pytgcalls==3.0.0.dev16
 wheel
 youtube_dl
