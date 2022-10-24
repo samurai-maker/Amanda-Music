@@ -2,6 +2,7 @@ pyrogram==1.4.16
 TgCrypto
 ffmpeg-python
 psutil
+pytgcalls
 pytgcalls==3.0.0.dev16
 python-dotenv==0.19.0
 wheel
