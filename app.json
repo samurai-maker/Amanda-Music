@@ -1,7 +1,7 @@
 {
   "name": "Telegram Voice Chat Music Player Bot ",
   "description": "Telegram Bot to Play Audio in Telegram Voice Chats",
-  "repository": "https://github.com/TR-TECH-GUIDE/Amanda-Music-v2",
+  "repository": "https://github.com/samurai-maker/Amanda-Music",
   "stack": "container",
   "keywords": [
     "telegram",
