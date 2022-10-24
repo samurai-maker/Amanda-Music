@@ -13,5 +13,3 @@ dnspython
 pytz
 apscheduler
 python-dotenv
-psutil
-wheel
