@@ -26,7 +26,7 @@ from config import Config
 U=USERNAME
 CHAT=Config.CHAT
 msg=Config.msg
-HOME_TEXT = "<b>Helo, [{}](tg://user?id={})\n\nIam Amanda-Music-v2 which plays music in Channels and Groups 24*7.\n\nI can even Stream Youtube Live in Your Voicechat.\n\nDeploy Your Own bot from source code below.\n\nHit /help to know about available commands.</b>"
+HOME_TEXT = "<b>Helo, [{}](tg://user?id={})\n\nIam reshmi_s_nair bot  which tune romance in Channels and Groups 24*7.\n\nI can even Stream Youtube Live in Your Voicechat.\n\nHit /help to know about available commands.</b>"
 HELP = """
 
 <b>
@@ -76,8 +76,7 @@ You can also use <code>/splay song name</code> to play a song from Jio Saavn or 
 async def start(client, message):
     buttons = [
         [
-        InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/SLBotsOfficial'),
-        InlineKeyboardButton('🧩 Source', url='https://github.com/TR-TECH-GUIDE/Amanda-Music-v2'),
+        InlineKeyboardButton('🏳️‍🌈 service Channel', url='https://t.me/live_blue_cast'),
     ],
     [
         InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help'),
@@ -95,8 +94,7 @@ async def start(client, message):
 async def show_help(client, message):
     buttons = [
         [
-        InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/SLBotsOfficial'),
-        InlineKeyboardButton('🧩 Source', url='https://github.com/TR-TECH-GUIDE/Amanda-Music-v2'),
+   InlineKeyboardButton('🏳️‍🌈 service Channel', url='https://t.me/live_blue_cast'),
     ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
