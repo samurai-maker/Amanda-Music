@@ -221,7 +221,7 @@ async def yplay(_, message: Message):
         try:
             thumb = info["thumbnail"]
         except:
-            thumb="https://telegra.ph/file/a3f20392287e674650c2b.jpg"
+            thumb="https://telegra.ph/file/0c4bb541cbb2797995568.jpg"
             pass
         if int(duration) > DURATION_LIMIT:
             k=await message.reply_text(f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed, the provided video is {duration} minute(s)")
@@ -343,7 +343,7 @@ async def deezer(_, message):
                 try:
                     thumb=song.get("image")
                 except:
-                    thumb="https://telegra.ph/file/a3f20392287e674650c2b.jpg"
+                    thumb="https://telegra.ph/file/0c4bb541cbb2797995568.jpg"
                     pass
                 GET_THUMB[url] = thumb
                 now = datetime.now()
@@ -430,7 +430,7 @@ async def deezer(_, message):
             try:
                 thumb=a.get("image")
             except:
-                thumb="https://telegra.ph/file/a3f20392287e674650c2b.jpg"
+                thumb="https://telegra.ph/file/0c4bb541cbb2797995568.jpg"
                 pass
             GET_THUMB[url] = thumb
         except:
@@ -1016,7 +1016,7 @@ async def yt_play_list(client, m: Message):
                 markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("📢 Join My Update Channel", url='https://t.me/SLBotsOfficial')
+                            InlineKeyboardButton("📢 Join service Channel", url='https://t.me/live_blue_cast')
                         ]
                     )
                 k=await m.reply("You Have Not Subscribed to MY Update Channel, and Please Join My Update Channel to Use This Feature 🤒", reply_markup=markup)
@@ -1131,7 +1131,7 @@ async def export_play_list(client, message: Message):
     file=f"{message.chat.id}_{message.message_id}.json"
     with open(file, 'w+') as outfile:
         json.dump(playlist, outfile, indent=4)
-    await client.send_document(chat_id=message.chat.id, document=file, file_name="PlayList.json", caption=f"Playlist\n\nNumber Of Songs: <code>{len(playlist)}</code>\n\nJoin [SLBotsOfficial](https://t.me/SLBotsOfficial)")
+    await client.send_document(chat_id=message.chat.id, document=file, file_name="PlayList.json", caption=f"Playlist\n\nNumber Of Songs: <code>{len(playlist)}</code>")
     await mp.delete(message)
     try:
         os.remove(file)
@@ -1241,12 +1241,12 @@ async def upload(client, message):
         return
     url=playlist[0][2]
     if playlist[0][3] == "telegram":
-        await client.send_audio(chat_id=message.chat.id, audio=url, caption=f"<b>Song: {playlist[0][1]}\nUploaded Using [Amanda-Music-v2](https://github.com/TR-TECH-GUIDE/Amanda-Music-v2)</b>")
+        await client.send_audio(chat_id=message.chat.id, audio=url, caption=f"<b>Song: {playlist[0][1]}\nUploaded</b>")
     elif playlist[0][3] == "youtube":
         file=GET_FILE[url]
         thumb=GET_THUMB.get(url)
         if thumb is None:
-            thumb="https://telegra.ph/file/a3f20392287e674650c2b.jpg"
+            thumb="https://telegra.ph/file/0c4bb541cbb2797995568.jpg"
         response = requests.get(thumb, allow_redirects=True)
         open(f"{playlist[0][5]}.jpeg", 'wb').write(response.content)
         await message.reply_chat_action("upload_document")
@@ -1260,14 +1260,14 @@ async def upload(client, message):
             title=playlist[0][1],
             duration=int(float(dur)),
             performer="Amanda-Music-v2",
-            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [Amanda-Music-v2](https://github.com/TR-TECH-GUIDE/Amanda-Music-v2)</b>"
+            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded </b>"
             )
         await m.delete()
     else:
         file=GET_FILE[url]
         thumb=GET_THUMB.get(url)
         if thumb is None:
-            thumb="https://telegra.ph/file/a3f20392287e674650c2b.jpg"
+            thumb="https://telegra.ph/file/0c4bb541cbb2797995568.jpg"
         response = requests.get(thumb, allow_redirects=True)
         open(f"{playlist[0][5]}.jpeg", 'wb').write(response.content)
         await message.reply_chat_action("upload_document")
@@ -1284,7 +1284,7 @@ async def upload(client, message):
             title=playlist[0][1],
             duration=int(float(dur)),
             performer="Amanda-Music-v2",
-            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded Using [Amanda-Music-v2](https://github.com/TR-TECH-GUIDE/Amanda-Music-v2)</b>"
+            caption=f"<b>Song: [{playlist[0][1]}]({playlist[0][2]})\nUploaded </b>"
             )
         await m.delete()
         try:
@@ -1306,12 +1306,12 @@ allcmd = ["play", "player", "splay", f"splay@{U}", f"play@{U}", f"player@{U}"] +
 async def not_chat(_, m: Message):
     buttons = [
         [
-            InlineKeyboardButton('⚡️Make Own Bot', url='https://heroku.com/deploy?template=https://github.com/TR-TECH-GUIDE/Amanda-Music-v2'),
-            InlineKeyboardButton('🧩 Source Code', url='https://github.com/TR-TECH-GUIDE/Amanda-Music-v2'),
+            InlineKeyboardButton('⚡️spark channel', url='https://t.me/pata_pata'),
+            InlineKeyboardButton('🧩 Set piece', url='https://t.me/malayalam_kambi_call'),
         ],
         [
             InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help')       
         ]
         ]
-    k=await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/TR-TECH-GUIDE/Amanda-Music-v2) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
+    k=await m.reply("<b>You can't use this bot in this group.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
     await mp.delete(m)
